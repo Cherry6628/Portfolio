@@ -11,7 +11,6 @@
     <div class="bg-grid"></div>
     <div class="bg-gradient"></div>
     <canvas class="cyber-bg"></canvas>
-
     <header>
       <nav>
         <a href="#home" class="logo">Sanjeevi V</a>
@@ -24,7 +23,6 @@
         </ul>
       </nav>
     </header>
-
     <section id="home">
       <div class="hero-grid">
         <div class="profile-section">
@@ -59,7 +57,6 @@
         </div>
       </div>
     </section>
-
     <section id="skills">
       <div class="section-header">
         <h2 class="highlight">Skill set</h2>
@@ -172,7 +169,6 @@
         </div>
       </div>
     </section>
-
     <section id="tools-and-ide">
       <div class="section-header">
         <h2 class="highlight">Tools and IDEs</h2>
@@ -248,17 +244,14 @@
         </div>
       </div>
     </section>
-
     <section id="projects">
       <div class="section-header" style="margin-bottom: 0px !important">
         <h2 class="highlight">Projects</h2>
       </div>
-
       <div class="project-section-header">
         <h3>Main Projects</h3>
       </div>
       <div class="projects-grid" id="main-projects"></div>
-
       <div class="project-section-header" style="margin-top: 100px !important">
         <h3>More Projects</h3>
         <div class="filter-pills" id="filter-pills">
@@ -267,7 +260,6 @@
       </div>
       <div class="projects-grid" id="pet-projects"></div>
     </section>
-
     <section id="contact">
       <div class="section-header" style="margin-bottom: 0px !important">
         <h2 class="highlight">Contact</h2>
@@ -319,379 +311,358 @@
       </div>
     </section>
     <script>
-      const projectData = [
-        {
-          type: ["java", "react js", "html/css"],
-          name: "Aran 360",
-          previewlink: undefined,
-          description:
-            "Cybersecurity learning platform with Learning Materials, Interactive Quizzes and Simulated Vulnerable Applications utilizing Dockers",
-          sourcecode: "https://github.com/Cherry6628/RegExLab",
-          image: "assets/Aran360.svg",
-          height: true,
-        },
-        {
-          type: ["java"],
-          name: "AVL Tree and RB Tree",
-          description: "Implementation of AVL Tree and Red Black Tree",
-          sourcecode:
-            "https://github.com/Cherry6628/JavaProjects/tree/main/datastructure",
-          image: "assets/tree.jpg",
-          height: true,
-          width: true,
-          pet: true,
-        },
-        {
-          type: ["java"],
-          name: "Avalanche Visualizer",
-          description:
-            "A Cryptographical Tool for Mathematicians and Students which demonstrates Avalanche in Basic Hashing Algorithms",
-          sourcecode:
-            "https://github.com/Cherry6628/JavaProjects/tree/main/AvalancheVisualizer",
-          image: "assets/avalanche.jpg",
-          height: true,
-          width: true,
-        },
-        {
-          type: ["java"],
-          name: "Routing Application",
-          description:
-            "Using Java and SQL to plan trips (Implementation of Dijkstra's Algorithm)",
-          sourcecode:
-            "https://github.com/Cherry6628/JavaProjects/tree/main/RoutingApplication",
-          image: "assets/route.jpg",
-          height: true,
-          width: true,
-          pet: true,
-        },
-        {
-          type: ["js"],
-          name: "Ramnath Kovind Website",
-          description:
-            "A biographical site developed as a collaborative project",
-          previewlink: "https://cherry6628.github.io/RamNathKovindWebsite/",
-          sourcecode: "https://github.com/Cherry6628/RamNathKovindWebsite",
-          image: "assets/Ramnath.png",
-          height: true,
-          pet: true,
-        },
-        {
-          type: ["python"],
-          name: "4 Way Handshake Decryptor",
-          description:
-            "Bruteforces WPA2 PSK Wifi Password via 4 Way Handshake Offline Attack",
-          sourcecode:
-            "https://github.com/Cherry6628/WPA2-PSK-Mode-Message-Integrity-Code-Reversing",
-          image: "assets/wpa2.png",
-          height: true,
-          width: true,
-        },
-        {
-          type: ["js", "html/css"],
-          name: "Zoho Timeline",
-          description:
-            "Zoho history page including Timeline, Products List and People of Zoho, created collaboratively",
-          previewlink:
-            "https://cherry6628.github.io/FrontEndProjects/ZohoTimeline/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/ZohoTimeline",
-          image: "assets/zoho.png",
-          width: true,
-        },
-        {
-          type: ["html/css"],
-          name: "Phantom Webpage",
-          description: "Static HTML Page",
-          previewlink: "https://cherry6628.github.io/FrontEndProjects/Phantom/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/Phantom",
-          image: "assets/phantom.svg",
-          pet: true,
-        },
-        {
-          type: ["html/css"],
-          name: "Sunnyside Webpage",
-          description: "Static HTML Page",
-          previewlink:
-            "https://cherry6628.github.io/FrontEndProjects/SunnySideTemplatePage/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/SunnySideTemplatePage",
-          width: true,
-          image: "assets/sunnyside-light.svg",
-          pet: true,
-        },
-        {
-          type: ["js"],
-          name: "Tic Tac Toe",
-          description: "Interactive Two-Player Tic Tac Toe Game",
-          previewlink:
-            "https://cherry6628.github.io/FrontEndProjects/TicTacToe/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/TicTacToe",
-          image: "assets/tictactoe.jpg",
-          height: true,
-          pet: true,
-        },
-        {
-          type: ["js"],
-          name: "LSystem Playground",
-          description:
-            "Generative art engine using LSystems to render complex organic growth patterns",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/blob/master/LSystem/index.html",
-          previewlink: "https://cherry6628.github.io/FrontEndProjects/LSystem/",
-          image: "assets/fractal.jpg",
-          height: true,
-          width: true,
-          pet: true,
-        },
-        {
-          type: ["js"],
-          name: "Weather Application",
-          description: "Weather application for real-time global forecasting",
-          previewlink: "https://cherry6628.github.io/FrontEndProjects/Weather/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/Weather",
-          image: "assets/weather.png",
-          height: true,
-          pet: true,
-        },
-        /////////
-        {
-          type: ["js"],
-          name: "Data Visualization Dashboard",
-          description:
-            "Interactive analytics dashboard for parsing and visualizing simple relational patterns in CSV datasets",
-          previewlink:
-            "https://cherry6628.github.io/FrontEndProjects/DataVisualizationDashboard/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/DataVisualizationDashboard",
-          image: "assets/dvd.png",
-          width: true,
-          pet: true,
-        },
-        {
-          type: ["html/css"],
-          name: "Strata Webpage",
-          description: "Static HTML Page",
-          previewlink: "https://cherry6628.github.io/FrontEndProjects/Strata/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/Strata",
-          width: true,
-          image: "assets/strata.png",
-          pet: true,
-        },
-        {
-          type: ["html/css"],
-          name: "Fylo Webpage",
-          description: "Static HTML Page",
-          previewlink:
-            "https://cherry6628.github.io/FrontEndProjects/FyloTemplatePage/",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/FyloTemplatePage",
-          width: true,
-          image: "assets/fylo-light.svg",
-          pet: true,
-        },
-        {
-          type: ["html/css"],
-          name: "Salt'n Pepper",
-          description: "A Restaurant Website built with pure HTML, CSS",
-          sourcecode:
-            "https://github.com/Cherry6628/FrontEndProjects/tree/master/saltnpepper",
-          previewlink:
-            "https://cherry6628.github.io/FrontEndProjects/saltnpepper/home/index.html",
-          image: "assets/saltnpepper.png",
-          width: true,
-        },
-        {
-          type: ["scratch"],
-          name: "Path Finder: Into the Unknown",
-          description:
-            "Implementation of DFS Algorithm to generate random mazes",
-          previewlink: "https://scratch.mit.edu/projects/1192005154",
-          sourcecode: "https://scratch.mit.edu/projects/1192005154/editor/",
-          image: "assets/scratch.png",
-          height: true,
-        },
-        {
-          type: ["scratch"],
-          name: "Football Game",
-          description: "Simple Football Game with Scratch",
-          previewlink: "https://scratch.mit.edu/projects/1183051346",
-          sourcecode: "https://scratch.mit.edu/projects/1183051346/editor/",
-          image: "assets/football.png",
-          height: true,
-          width: true,
-          pet: true,
-        },
-        {
-          type: ["scratch"],
-          name: "Spirograph",
-          description:
-            "Mathematical art generator simulating the movement of geometric curves",
-          previewlink: "https://scratch.mit.edu/projects/1185943821",
-          sourcecode: "https://scratch.mit.edu/projects/1185943821/editor/",
-          image: "assets/spirograph.png",
-          height: true,
-          width: true,
-          pet: true,
-        },
-      ];
-      const mainProjects = projectData.filter((p) => !p.pet);
-      const petProjects = projectData.filter((p) => p.pet);
-      const allTypes = [...new Set(petProjects.flatMap((p) => p.type))];
-      const filterPills = document.getElementById("filter-pills");
-      allTypes.forEach((type) => {
-        const btn = document.createElement("button");
-        btn.className = "filter-pill";
-        btn.dataset.filter = type;
-        btn.textContent = type.toUpperCase();
-        filterPills.appendChild(btn);
-      });
-      function createProjectCard(project) {
-        return `
-          <div class="project-card">
-            <div class="project-thumbnail">
-              <img src="${project.image}" alt="${project.name}" style="${project.width ? "width:100%;" : ""}${project.height ? "height:100%;" : ""}">
-            </div>
-            <div class="project-content">
-              <div class="project-tags">
-                ${project.type.map((t) => `<span class="project-tag">${t}</span>`).join("")}
-              </div>
-              <h4>${project.name}</h4>
-              <p>${project.description}</p>
-              <div class="project-links">
-                ${project.previewlink ? `<a href="${project.previewlink}" target="_blank" class="project-link project-link-primary"><i data-lucide="external-link"></i> Demo</a>` : ""}
-                <a href="${project.sourcecode}" target="_blank" class="project-link project-link-secondary"><i data-lucide="github"></i> Code</a>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-      function renderProjects(filter = "all") {
-        const mainGrid = document.getElementById("main-projects");
-        const petGrid = document.getElementById("pet-projects");
-        mainGrid.innerHTML = mainProjects.map(createProjectCard).join("");
-        const filtered =
-          filter === "all"
-            ? petProjects
-            : petProjects.filter((p) => p.type.includes(filter));
-        petGrid.innerHTML = filtered.map(createProjectCard).join("");
-
-        lucide.createIcons();
-      }
-      filterPills.addEventListener("click", (e) => {
-        if (e.target.classList.contains("filter-pill")) {
-          document
-            .querySelectorAll(".filter-pill")
-            .forEach((btn) => btn.classList.remove("active"));
-          e.target.classList.add("active");
-          renderProjects(e.target.dataset.filter);
-        }
-      });
-      const sections = document.querySelectorAll("section");
-      const navItems = document.querySelectorAll(".nav-item");
-      window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          if (scrollY >= sectionTop - 100) {
-            current = section.getAttribute("id");
-          }
-        });
-        navItems.forEach((item) => {
-          item.classList.remove("active");
-          if (item.getAttribute("href") === "#" + current) {
-            item.classList.add("active");
-          }
-        });
-      });
-      renderProjects();
-      lucide.createIcons();
-    </script>
-
-    <script>
-      const canvas = document.querySelector(".cyber-bg");
-      const ctx = canvas.getContext("2d");
-      function resize() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      }
-      resize();
-      window.addEventListener("resize", resize);
-      const NODE_COUNT = 100;
-      const MAX_DIST = 140;
-      const nodes = [];
-      const edges = [];
-      for (let i = 0; i < NODE_COUNT; i++)
-        nodes.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-        });
-      function updateEdges() {
-        edges.length = 0;
-        for (let i = 0; i < nodes.length; i++)
-          for (let j = i + 1; j < nodes.length; j++) {
-            const dx = nodes[i].x - nodes[j].x;
-            const dy = nodes[i].y - nodes[j].y;
+      (() => {
+        const projectData = [
+          {
+            type: ["java", "react js", "html/css"],
+            name: "Aran 360",
+            previewlink: undefined,
+            description:
+              "Cybersecurity learning platform with Learning Materials, Interactive Quizzes and Simulated Vulnerable Applications utilizing Dockers",
+            sourcecode: "https://github.com/Cherry6628/RegExLab",
+            image: "assets/Aran360.svg",
+            height: true,
+          },
+          {
+            type: ["java"],
+            name: "AVL Tree and RB Tree",
+            description: "Implementation of AVL Tree and Red Black Tree",
+            sourcecode:
+              "https://github.com/Cherry6628/JavaProjects/tree/main/datastructure",
+            image: "assets/tree.jpg",
+            height: true,
+            width: true,
+            pet: true,
+          },
+          {
+            type: ["java"],
+            name: "Avalanche Visualizer",
+            description:
+              "A Cryptographical Tool for Mathematicians and Students which demonstrates Avalanche in Basic Hashing Algorithms",
+            sourcecode:
+              "https://github.com/Cherry6628/JavaProjects/tree/main/AvalancheVisualizer",
+            image: "assets/avalanche.jpg",
+            height: true,
+            width: true,
+          },
+          {
+            type: ["java"],
+            name: "Routing Application",
+            description:
+              "Using Java and SQL to plan trips (Implementation of Dijkstra's Algorithm)",
+            sourcecode:
+              "https://github.com/Cherry6628/JavaProjects/tree/main/RoutingApplication",
+            image: "assets/route.jpg",
+            height: true,
+            width: true,
+            pet: true,
+          },
+          {
+            type: ["js"],
+            name: "Ramnath Kovind Website",
+            description:
+              "A biographical site developed as a collaborative project",
+            previewlink: "https://cherry6628.github.io/RamNathKovindWebsite/",
+            sourcecode: "https://github.com/Cherry6628/RamNathKovindWebsite",
+            image: "assets/Ramnath.png",
+            height: true,
+            pet: true,
+          },
+          {
+            type: ["python"],
+            name: "4 Way Handshake Decryptor",
+            description:
+              "Bruteforces WPA2 PSK Wifi Password via 4 Way Handshake Offline Attack",
+            sourcecode:
+              "https://github.com/Cherry6628/WPA2-PSK-Mode-Message-Integrity-Code-Reversing",
+            image: "assets/wpa2.png",
+            height: true,
+            width: true,
+          },
+          {
+            type: ["js", "html/css"],
+            name: "Zoho Timeline",
+            description:
+              "Zoho history page including Timeline, Products List and People of Zoho, created collaboratively",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/ZohoTimeline/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/ZohoTimeline",
+            image: "assets/zoho.png",
+            width: true,
+          },
+          {
+            type: ["html/css"],
+            name: "Phantom Webpage",
+            description: "Static HTML Page",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/Phantom/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/Phantom",
+            image: "assets/phantom.svg",
+            pet: true,
+          },
+          {
+            type: ["html/css"],
+            name: "Sunnyside Webpage",
+            description: "Static HTML Page",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/SunnySideTemplatePage/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/SunnySideTemplatePage",
+            width: true,
+            image: "assets/sunnyside-light.svg",
+            pet: true,
+          },
+          {
+            type: ["js"],
+            name: "Tic Tac Toe",
+            description: "Interactive Two-Player Tic Tac Toe Game",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/TicTacToe/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/TicTacToe",
+            image: "assets/tictactoe.jpg",
+            height: true,
+            pet: true,
+          },
+          {
+            type: ["js"],
+            name: "LSystem Playground",
+            description:
+              "Generative art engine using LSystems to render complex organic growth patterns",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/blob/master/LSystem/index.html",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/LSystem/",
+            image: "assets/fractal.jpg",
+            height: true,
+            width: true,
+            pet: true,
+          },
+          {
+            type: ["js"],
+            name: "Weather Application",
+            description: "Weather application for real-time global forecasting",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/Weather/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/Weather",
+            image: "assets/weather.png",
+            height: true,
+            pet: true,
+          },
+          {
+            type: ["js"],
+            name: "Data Visualization Dashboard",
+            description:
+              "Interactive analytics dashboard for parsing and visualizing simple relational patterns in CSV datasets",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/DataVisualizationDashboard/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/DataVisualizationDashboard",
+            image: "assets/dvd.png",
+            width: true,
+            pet: true,
+          },
+          {
+            type: ["html/css"],
+            name: "Strata Webpage",
+            description: "Static HTML Page",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/Strata/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/Strata",
+            width: true,
+            image: "assets/strata.png",
+            pet: true,
+          },
+          {
+            type: ["html/css"],
+            name: "Fylo Webpage",
+            description: "Static HTML Page",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/FyloTemplatePage/",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/FyloTemplatePage",
+            width: true,
+            image: "assets/fylo-light.svg",
+            pet: true,
+          },
+          {
+            type: ["html/css"],
+            name: "Salt'n Pepper",
+            description: "A Restaurant Website built with pure HTML, CSS",
+            sourcecode:
+              "https://github.com/Cherry6628/FrontEndProjects/tree/master/saltnpepper",
+            previewlink:
+              "https://cherry6628.github.io/FrontEndProjects/saltnpepper/home/index.html",
+            image: "assets/saltnpepper.png",
+            width: true,
+          },
+          {
+            type: ["scratch"],
+            name: "Path Finder: Into the Unknown",
+            description:
+              "Implementation of DFS Algorithm to generate random mazes",
+            previewlink: "https://scratch.mit.edu/projects/1192005154",
+            sourcecode: "https://scratch.mit.edu/projects/1192005154/editor/",
+            image: "assets/scratch.png",
+            height: true,
+          },
+          {
+            type: ["scratch"],
+            name: "Football Game",
+            description: "Simple Football Game with Scratch",
+            previewlink: "https://scratch.mit.edu/projects/1183051346",
+            sourcecode: "https://scratch.mit.edu/projects/1183051346/editor/",
+            image: "assets/football.png",
+            height: true,
+            width: true,
+            pet: true,
+          },
+          {
+            type: ["scratch"],
+            name: "Spirograph",
+            description:
+              "Mathematical art generator simulating the movement of geometric curves",
+            previewlink: "https://scratch.mit.edu/projects/1185943821",
+            sourcecode: "https://scratch.mit.edu/projects/1185943821/editor/",
+            image: "assets/spirograph.png",
+            height: true,
+            width: true,
+            pet: true,
+          },
+        ];
+        const mainProjects = projectData.filter((p) => !p.pet);
+        const petProjects = projectData.filter((p) => p.pet);
+        const allTypes = [...new Set(petProjects.flatMap((p) => p.type))];
+        const filterPills = document.getElementById("filter-pills");
+        const sections = document.querySelectorAll("section");
+        const navItems = document.querySelectorAll(".nav-item");
+        const canvas = document.querySelector(".cyber-bg");
+        const ctx = canvas.getContext("2d");
+        const NODE_COUNT = 100;
+        const MAX_DIST = 140;
+        const nodes = [];
+        const edges = [];
+        let scanRadius = 0;
+        const createProjectCard = function (project) {
+          return `<div class="project-card"><div class="project-thumbnail"><img src="${project.image}" alt="${project.name}" style="${project.width ? "width:100%;" : ""}${project.height ? "height:100%;" : ""}"></div><div class="project-content"><div class="project-tags">${project.type.map((t) => `<span class="project-tag">${t}</span>`).join("")}</div><h4>${project.name}</h4><p>${project.description}</p><div class="project-links">${project.previewlink ? `<a href="${project.previewlink}" target="_blank" class="project-link project-link-primary"><i data-lucide="external-link"></i> Demo</a>` : ""}<a href="${project.sourcecode}" target="_blank" class="project-link project-link-secondary"><i data-lucide="github"></i> Code</a></div></div></div>`;
+        };
+        const renderProjects = function (filter = "all") {
+          const mainGrid = document.getElementById("main-projects");
+          const petGrid = document.getElementById("pet-projects");
+          mainGrid.innerHTML = mainProjects.map(createProjectCard).join("");
+          const filtered =
+            filter === "all"
+              ? petProjects
+              : petProjects.filter((p) => p.type.includes(filter));
+          petGrid.innerHTML = filtered.map(createProjectCard).join("");
+          lucide.createIcons();
+        };
+        const resize = function () {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        };
+        const updateEdges = function () {
+          edges.length = 0;
+          for (let i = 0; i < nodes.length; i++)
+            for (let j = i + 1; j < nodes.length; j++) {
+              const dx = nodes[i].x - nodes[j].x;
+              const dy = nodes[i].y - nodes[j].y;
+              const dist = Math.hypot(dx, dy);
+              if (dist < MAX_DIST)
+                edges.push({ a: i, b: j, pulse: Math.random() });
+            }
+        };
+        const draw = function () {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          nodes.forEach((n) => {
+            n.x += n.vx;
+            n.y += n.vy;
+            if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
+            if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
+          });
+          updateEdges();
+          edges.forEach((e) => {
+            const n1 = nodes[e.a];
+            const n2 = nodes[e.b];
+            const dx = n1.x - n2.x;
+            const dy = n1.y - n2.y;
             const dist = Math.hypot(dx, dy);
-            if (dist < MAX_DIST)
-              edges.push({
-                a: i,
-                b: j,
-                pulse: Math.random(),
-              });
-          }
-      }
-      let scanRadius = 0;
-      function draw() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        nodes.forEach((n) => {
-          n.x += n.vx;
-          n.y += n.vy;
-          if (n.x < 0 || n.x > canvas.width) n.vx *= -1;
-          if (n.y < 0 || n.y > canvas.height) n.vy *= -1;
-        });
-        updateEdges();
-        edges.forEach((e) => {
-          const n1 = nodes[e.a];
-          const n2 = nodes[e.b];
-          const dx = n1.x - n2.x;
-          const dy = n1.y - n2.y;
-          const dist = Math.hypot(dx, dy);
-          const alpha = 1 - dist / MAX_DIST;
-          ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
-          ctx.lineWidth = 0.6;
-          ctx.beginPath();
-          ctx.moveTo(n1.x, n1.y);
-          ctx.lineTo(n2.x, n2.y);
-          ctx.stroke();
+            const alpha = 1 - dist / MAX_DIST;
+            ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
+            ctx.lineWidth = 0.6;
+            ctx.beginPath();
+            ctx.moveTo(n1.x, n1.y);
+            ctx.lineTo(n2.x, n2.y);
+            ctx.stroke();
 
-          e.pulse += 0.02;
-          if (e.pulse > 1) e.pulse = 0;
-          const px = n1.x + (n2.x - n1.x) * e.pulse;
-          const py = n1.y + (n2.y - n1.y) * e.pulse;
-          ctx.fillStyle = "#3b82f6";
-          ctx.beginPath();
-          ctx.arc(px, py, 1.6, 0, Math.PI * 2);
-          ctx.fill();
+            e.pulse += 0.02;
+            if (e.pulse > 1) e.pulse = 0;
+            const px = n1.x + (n2.x - n1.x) * e.pulse;
+            const py = n1.y + (n2.y - n1.y) * e.pulse;
+            ctx.fillStyle = "#3b82f6";
+            ctx.beginPath();
+            ctx.arc(px, py, 1.6, 0, Math.PI * 2);
+            ctx.fill();
+          });
+          nodes.forEach((n) => {
+            ctx.fillStyle = "#3b82f6";
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+          });
+          scanRadius += 1.2;
+          ctx.strokeStyle = "rgba(59,130,246,.08)";
+          ctx.lineWidth = 2;
+          if (scanRadius > Math.max(canvas.width, canvas.height))
+            scanRadius = 0;
+          requestAnimationFrame(draw);
+        };
+        allTypes.forEach((type) => {
+          const btn = document.createElement("button");
+          btn.className = "filter-pill";
+          btn.dataset.filter = type;
+          btn.textContent = type.toUpperCase();
+          filterPills.appendChild(btn);
         });
-        nodes.forEach((n) => {
-          ctx.fillStyle = "#3b82f6";
-          ctx.beginPath();
-          ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
-          ctx.fill();
+        filterPills.addEventListener("click", (e) => {
+          if (e.target.classList.contains("filter-pill")) {
+            document
+              .querySelectorAll(".filter-pill")
+              .forEach((btn) => btn.classList.remove("active"));
+            e.target.classList.add("active");
+            renderProjects(e.target.dataset.filter);
+          }
         });
-        scanRadius += 1.2;
-        ctx.strokeStyle = "rgba(59,130,246,.08)";
-        ctx.lineWidth = 2;
-        if (scanRadius > Math.max(canvas.width, canvas.height)) scanRadius = 0;
-        requestAnimationFrame(draw);
-      }
-      draw();
+        window.addEventListener("scroll", () => {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (scrollY >= sectionTop - 100)
+              current = section.getAttribute("id");
+          });
+          navItems.forEach((item) => {
+            item.classList.remove("active");
+            if (item.getAttribute("href") === "#" + current)
+              item.classList.add("active");
+          });
+        });
+        renderProjects();
+        lucide.createIcons();
+        resize();
+        window.addEventListener("resize", resize);
+        for (let i = 0; i < NODE_COUNT; i++)
+          nodes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.5,
+          });
+        draw();
+      })();
     </script>
   </body>
 </html>
