@@ -339,8 +339,13 @@
         const navItems = document.querySelectorAll(".nav-item");
         const canvas = document.querySelector(".cyber-bg");
         const ctx = canvas.getContext("2d");
-        const NODE_COUNT = Math.floor((window.innerWidth * window.innerHeight) / 15000);
-        const MAX_DIST = Math.min(window.innerWidth, window.innerHeight) / 6;
+        const calculateNodeCount=()=>{
+          const area = canvas.width * canvas.height;let count;
+          if (area < 400000) count = 50 + Math.floor(area / 8000);else if (area < 1200000) count = 100 + Math.floor(area / 12000);else count = 200 + Math.floor(area / 20000);
+          return Math.min(count, 600);
+        }
+        const NODE_COUNT = calculateNodeCount();
+        const MAX_DIST = Math.min(window.innerWidth, window.innerHeight) / 5;
         const nodes = [];
         const edges = [];
         let scanRadius = 0;
@@ -396,7 +401,6 @@
             ctx.moveTo(n1.x, n1.y);
             ctx.lineTo(n2.x, n2.y);
             ctx.stroke();
-
             e.pulse += 0.02;
             if (e.pulse > 1) e.pulse = 0;
             const px = n1.x + (n2.x - n1.x) * e.pulse;
