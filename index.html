@@ -25,19 +25,9 @@
     </header>
     <section id="home">
       <div class="hero-grid">
-        <div class="profile-section">
-          <div class="profile-glow"></div>
-          <img
-            src="assets/user-thumbnail.png"
-            alt="Sanjeevi V"
-            class="profile-image"
-          />
-        </div>
+        <div class="profile-section"><div class="profile-glow"></div><img class="profile-image" src="assets/user-thumbnail.png" alt="Sanjeevi V"/></div>
         <div class="hero-content">
-          <h1>
-            Hi, I am <br />
-            <span class="highlight">Sanjeevi V</span>
-          </h1>
+          <h1>Hi, I am <br/><span class="highlight">Sanjeevi V</span></h1>
           <p class="hero-description">
             Cybersecurity enthusiast focused on web application and network
             security. I study how vulnerabilities arise and how to defend
@@ -45,14 +35,8 @@
             development skills to build secure systems.
           </p>
           <div class="cta-group">
-            <a href="#projects" class="btn btn-primary">
-              <i data-lucide="code-2"></i>
-              View Projects
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              <i data-lucide="mail"></i>
-              Get in Touch
-            </a>
+            <a href="#projects" class="btn btn-primary"><i data-lucide="code-2"></i>View Projects</a>
+            <a href="#contact" class="btn btn-secondary"><i data-lucide="mail"></i>Get in Touch</a>
           </div>
         </div>
       </div>
@@ -355,8 +339,8 @@
         const navItems = document.querySelectorAll(".nav-item");
         const canvas = document.querySelector(".cyber-bg");
         const ctx = canvas.getContext("2d");
-        const NODE_COUNT = 100;
-        const MAX_DIST = 140;
+        const NODE_COUNT = Math.floor((window.innerWidth * window.innerHeight) / 15000);
+        const MAX_DIST = Math.min(window.innerWidth, window.innerHeight) / 6;
         const nodes = [];
         const edges = [];
         let scanRadius = 0;
@@ -374,10 +358,11 @@
           petGrid.innerHTML = filtered.map(createProjectCard).join("");
           lucide.createIcons();
         };
-        const resize = function () {
+        const resize = function() {
           canvas.width = window.innerWidth;
           canvas.height = window.innerHeight;
-        };
+          nodes.forEach(n => {n.x=Math.random()*canvas.width;n.y=Math.random()*canvas.height;});
+        }
         const updateEdges = function () {
           edges.length = 0;
           for (let i = 0; i < nodes.length; i++)
