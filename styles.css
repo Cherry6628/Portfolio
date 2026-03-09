@@ -328,13 +328,23 @@ section {
 
 .filter-pills {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   padding: 6px;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 100px;
 }
-
+@media (max-width: 480px) {
+  .filter-pills {
+    gap: 8px;
+    padding: 4px;
+  }
+  .filter-pill {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
 .filter-pill {
   padding: 8px 20px;
   background: transparent;
