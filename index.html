@@ -80,20 +80,15 @@
       </div>
     </section>
     <section id="projects">
-      <div class="section-header" style="margin-bottom: 0px !important">
-        <h2 class="highlight">Projects</h2>
-      </div>
-      <div class="project-section-header">
-        <h3>Main Projects</h3>
-      </div>
+      <div class="section-header" style="margin-bottom: 0px !important"><h2 class="highlight">Projects</h2></div>
+      <div class="project-section-header"><h3>Main Projects</h3></div>
       <div class="projects-grid" id="main-projects"></div>
-      <div class="project-section-header" style="margin-top: 100px !important">
-        <h3>More Projects</h3>
-        <div class="filter-pills" id="filter-pills">
-          <button class="filter-pill active" data-filter="all">All</button>
-        </div>
-      </div>
+      
+      <div class="project-section-header" style="margin-top: 100px !important"><h3>More Projects</h3><div class="filter-pills" id="filter-pills"><button class="filter-pill active" data-filter="all">All</button></div></div>
       <div class="projects-grid" id="pet-projects"></div>
+      
+      <div class="project-section-header" style="margin-top:100px !important"><h3>Group Projects</h3></div>
+      <div class="projects-grid" id="group-projects"></div>
     </section>
     <section id="contact">
       <div class="section-header" style="margin-bottom: 0px !important">
@@ -119,6 +114,7 @@
             sourcecode: "https://github.com/Cherry6628/RegExLab",
             image: "assets/Aran360.svg",
             height: true,
+            group: true
           },
           {
             type: ["java"],
@@ -164,6 +160,7 @@
             image: "assets/Ramnath.png",
             height: true,
             pet: true,
+            group: true
           },
           {
             type: ["python"],
@@ -187,6 +184,7 @@
               "https://github.com/Cherry6628/FrontEndProjects/tree/master/ZohoTimeline",
             image: "assets/zoho.png",
             width: true,
+            group: true
           },
           {
             type: ["html/css"],
@@ -333,6 +331,7 @@
         ];
         const mainProjects = projectData.filter((p) => !p.pet);
         const petProjects = projectData.filter((p) => p.pet);
+        const groupProjects = projectData.filter((p) => p.group);
         const allTypes = [...new Set(petProjects.flatMap((p) => p.type))];
         const filterPills = document.getElementById("filter-pills");
         const sections = document.querySelectorAll("section");
@@ -355,7 +354,9 @@
         const renderProjects = function (filter = "all") {
           const mainGrid = document.getElementById("main-projects");
           const petGrid = document.getElementById("pet-projects");
+          const groupGrid = document.getElementById("group-projects");
           mainGrid.innerHTML = mainProjects.map(createProjectCard).join("");
+          groupGrid.innerHTML = groupProjects.map(createProjectCard).join("");
           const filtered =
             filter === "all"
               ? petProjects
