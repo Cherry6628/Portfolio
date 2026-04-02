@@ -192,11 +192,13 @@ section {
   letter-spacing: -0.03em;
   background: linear-gradient(to bottom right, #ffffff, #a0a0a0);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .highlight {
   background: linear-gradient(to right, var(--accent), #8b5cf6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -538,6 +540,7 @@ section {
   margin-bottom: 24px;
   display: -webkit-box;
   -webkit-line-clamp: 6;
+  line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
